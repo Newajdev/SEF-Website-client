@@ -2,18 +2,23 @@
 @plugin "daisyui";
 
 
-.nav, .nav-li{
-    animation: liAnimation 0.6s ease-in-out alternate;
+.Bg-BaseClr {
+  background-color: #00280B;
 }
 
-@keyframes liAnimation{
-   from {
-      gap: 0;
-      opacity: 0;
-    }
-    to {
-      gap: 6;
-      opacity: 1;
-    } 
+.Bg-btn {
+  background-color: #F2762F;
 }
 
+ul li .active {
+  color: #F2762F;
+  border-bottom: 3px solid #F2762F;
+  border-radius: none;
+}
+
+.footer {
+  background-image: url('../src/assets/bg.png');
+  background-repeat: round;
+  /* height: 50dvh; */
+  background-color: #00280B;
+}
