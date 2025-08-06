@@ -19,6 +19,8 @@ ul li .active {
 .footer {
   background-image: url('../src/assets/bg.png');
   background-repeat: round;
-  /* height: 50dvh; */
-  background-color: #00280B;
+}
+.section {
+  background-image: url('../src/assets/bg-3.png');
+  
 }

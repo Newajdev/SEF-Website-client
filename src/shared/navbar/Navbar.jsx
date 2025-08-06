@@ -13,7 +13,7 @@ const Navbar = () => {
     const RightNavList = <>
         <li className='hover:text-[#F2762F] border-b-3 border-b-transparent duration-200'><NavLink to={'/about'}>about</NavLink></li>
         <li className='hover:text-[#F2762F] border-b-3 border-b-transparent duration-200'><NavLink to={'/contact'}>contact</NavLink></li>
-        <li className='hover:text-[#F2762F] border-b-3 border-b-transparent duration-200'><NavLink to={'/gallary'}>gallary</NavLink></li>
+        <li className='hover:text-[#F2762F] border-b-3 border-b-transparent duration-200'><NavLink to={'/success'}>success story</NavLink></li>
     </>
 
     return (

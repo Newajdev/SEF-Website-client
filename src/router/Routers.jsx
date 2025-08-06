@@ -1,6 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/home/Home";
+import Courses from "../pages/courses/Courses";
+import BootCamp from "../pages/bootcamp/BootCamp";
+import Seminar from "../pages/seminar/Seminar";
+import About from "../pages/about/About";
+import Contact from "../pages/contact/Contact";
+import SuccessStory from "../pages/successstory/SuccessStory";
 
 
 const Routers = createBrowserRouter([
@@ -14,27 +20,27 @@ const Routers = createBrowserRouter([
       },
       {
         path:'/courses',
-        element: <h3>This Is Course Page</h3>
+        element: <Courses></Courses>
       },
       {
         path:'/bootcamp',
-        element: <h3>This Is bootcamp Page</h3>
+        element: <BootCamp></BootCamp>
       },
       {
         path:'/seminar',
-        element: <h3>This Is seminar Page</h3>
+        element: <Seminar></Seminar>
       },
       {
         path:'/about',
-        element: <h3>This Is About Us Page</h3>
+        element: <About></About>
       },
       {
         path:'/Contact',
-        element: <h3>This Is contact Page</h3>
+        element: <Contact></Contact>
       },
       {
-        path:'/gallary',
-        element: <h3>This Is Gallary Page</h3>
+        path:'/success',
+        element: <SuccessStory></SuccessStory>
       },
     ]
   },
