@@ -72,7 +72,7 @@ export default function Home() {
       <p className="text-2xl uppercase text-red-500">our Website is under Constraction Please Stay with us</p>
 
 
-      <div className="mt-5 w-[75%] mx-auto rounded-2xl">
+      <div className="mt-5 lg:w-[75%]  mx-auto rounded-2xl">
         <h1 className="text-2xl font-bold uppercase">
           our Courses
         </h1>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-5 py-2 text-center  bg-green-100 border-none rounded-full flex items-center justify-center">
+      <div className="px-5 py-2 text-center  bg-green-100 border-none rounded-full flex lg:flex-row  flex-col items-center justify-center">
         <p className="lg:text-3xl">Contact with us:</p>
       <p className="ml-10 font-bold lg:text-3xl">+880 1817-121469, +880 1316-765066, +880 1757-549926</p>
       </div>
