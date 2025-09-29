@@ -66,7 +66,7 @@ export default function Home() {
     // </Container>
 
     <section className="lg:h-screen lg:max-w-4/5 mx-auto p-5 text-center flex flex-col gap-2 justify-center">
-      <h1 className="text-5xl ">
+      <h1 className="text-2xl lg:text-5xl ">
         Welcome To <span className="font-semibold text-green-950">{"Shah Emdadia Freelancers'"}</span>
       </h1>
       <p className="text-2xl uppercase text-red-500">our Website is under Constraction Please Stay with us</p>
