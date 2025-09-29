@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Container from "@/components/Container";
+import ChatBot from "@/components/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +25,21 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* <Navbar/>
+        <div className="fixed bottom-12 right-12 hover:cursor-pointer">
+          <ChatBot/>
+        </div> */}
+
+        <div className="">
+          
+            {children}
+    
+        </div>
+        {/* <div className="bg-[#FDF4EC] background">
+          
+            {children}
+    
+        </div> */}
       </body>
     </html>
   );
