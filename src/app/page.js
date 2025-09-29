@@ -65,7 +65,7 @@ export default function Home() {
     //   <WhyChoiceUs/> */}
     // </Container>
 
-    <section className="lg:h-screen lg:max-w-4/5 mx-auto p-5 text-center flex flex-col gap-2 justify-center">
+    <section className="lg:h-screen lg:max-w-4/5 mx-auto p-2 lg:p-5 text-center flex flex-col gap-2 justify-center">
       <h1 className="text-2xl lg:text-5xl ">
         Welcome To <span className="font-semibold text-green-950">{"Shah Emdadia Freelancers'"}</span>
       </h1>
@@ -104,7 +104,7 @@ export default function Home() {
 
       <div className="px-5 py-2 text-center  bg-green-100 border-none rounded-full flex lg:flex-row  flex-col items-center justify-center">
         <p className="lg:text-3xl">Contact with us:</p>
-      <p className="ml-10 font-bold lg:text-3xl">+880 1817-121469, +880 1316-765066, +880 1757-549926</p>
+      <p className="lg:ml-10 font-bold lg:text-3xl">+880 1817-121469, +880 1316-765066, +880 1757-549926</p>
       </div>
       
 
