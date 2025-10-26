@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Container from "@/components/Container";
 import ChatBot from "@/components/ChatBot";
+import AnalyticsTracker from "./AnaliyticsTracker";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,24 +24,40 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K0ZT9GH5N9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K0ZT9GH5N9');
+          `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         
         {/* <Navbar/>
         <div className="fixed bottom-12 right-12 hover:cursor-pointer">
           <ChatBot/>
         </div> */}
 
         <div className="">
-          
-            {children}
-    
+
+          {children}
+
         </div>
         {/* <div className="bg-[#FDF4EC] background">
           
             {children}
     
         </div> */}
+        <AnalyticsTracker />
       </body>
     </html>
   );
