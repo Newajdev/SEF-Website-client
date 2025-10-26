@@ -103,13 +103,11 @@ export default function sdfsdfsdfsdfsdf() {
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: `${FullName} we Recive your data. we will conferm you by WhatsApp`,
+                title: `${EnglishName} we Recive your data. we will conferm you by WhatsApp`,
                 showConfirmButton: false,
                 timer: 900
             });
         }
-
-
     };
 
     const handleImageChange = async (e) => {
