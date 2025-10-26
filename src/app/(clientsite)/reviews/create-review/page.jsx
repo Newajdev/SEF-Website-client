@@ -1,7 +1,5 @@
 'use client';
-import Container from "@/components/Container";
 import axios from "axios";
-
 import Image from "next/image";
 import { useState } from "react";
 import { useForm } from "react-hook-form"
@@ -26,8 +24,6 @@ export default function ReviewForm() {
         formState: { errors },
     } = useForm()
 
-    // const reviewText = watch("review") || "";
-
     const onSubmit = async (data) => {
         setLoading(true)
         reset()
@@ -38,8 +34,7 @@ export default function ReviewForm() {
         const CoursName = data.courses;
         const Review = data.review;
 
-
-        const res = await axios.post('https://sef-server.onrender.com/reviews', { PhotoUrl, FullName, CoursName, Review })
+        const res = await axios.post('https://sef-server.onrender.com/api/reviews/reviews', { PhotoUrl, FullName, CoursName, Review })
 
 
         if (res.data.Message === `${FullName} your review is added succesfully..`) {
