@@ -13,7 +13,6 @@ const Image_UPLOAD_API = `https://api.imgbb.com/1/upload?key=${API_KEY}`
 export default function ReviewForm() {
     const [previewimg, setPreviewImg] = useState('/asset/placeholder.png');
     const [imageerr, setImageErr] = useState('')
-    const [Characters, setCharacters] = useState(0)
     const [ImageURL, setImageURL] = useState('')
     const [loading, setLoading] = useState(false)
     const {

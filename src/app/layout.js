@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en"  data-theme="light">
        <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-K0ZT9GH5N9"
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
          
         {/* <Navbar/>
