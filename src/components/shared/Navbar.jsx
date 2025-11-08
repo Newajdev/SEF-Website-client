@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [acticelink, setActiveLink]= useState('/')
-    const Navigate = usePathname(null)
+    const Navigate = usePathname()
     
     
 
@@ -37,35 +37,41 @@ const Navbar = () => {
         setActiveLink(Navigate)
     }    
     return (
-        <div className='Bg-primary text-white py-6 sticky top-0 w-full z-10'>
-            <Container>
-                <div className='flex items-center justify-between'>
-                    <div className=''>
-                        <Image src='/asset/SEF_Logo-01.svg' width={160} height={50} alt="Shah Emdadia Freelancers' logo" loading="lazy"  />
-                        </div>
+      <div className="Bg-primary text-white py-6 sticky top-0 w-full z-10">
+        <Container>
+          <div className="flex items-center justify-between">
+            <div className="">
+              <Image
+                src="/asset/SEF_Logo-01.svg"
+                width={160}
+                height={50}
+                alt="Shah Emdadia Freelancers' logo"
+                loading="lazy"
+              />
+            </div>
 
-                    <div className=''>
-                        <ul className='flex gap-x-6 text-lg font-semibold'>
-                            {
-                                navLinks?.map((link)=>
-                                <li
-                                className={`${acticelink == link.path && 'text-[#F2762F]'}`}
-                                onClick={hendleNavigate}
-                                key={link.path}
-                                >
-                                    <Link href={link.path}>{link.title}</Link>
-                                </li>
-                                )
-                            }
-                        </ul>
-                    </div>
+            <div className="">
+              <ul className="flex gap-x-6 text-lg font-semibold">
+                {navLinks?.map((link) => (
+                  <li
+                    className={`${Navigate == link.path && "text-[#F2762F]"}`}
+                    onClick={hendleNavigate}
+                    key={link.path}
+                  >
+                    <Link href={link.path}>{link.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-                    <div className=''>
-                        <button className='Bg-secondery px-5 py-2 rounded-full text-lg font-semibold'>Enroll Now</button>
-                    </div>
-                </div>
-            </Container>
-        </div>
+            <div className="">
+              <button className="Bg-secondery px-5 py-2 rounded-full text-lg font-semibold">
+                Enroll Now
+              </button>
+            </div>
+          </div>
+        </Container>
+      </div>
     );
 };
 

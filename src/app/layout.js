@@ -1,10 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
-import Container from "@/components/Container";
+
 import ChatBot from "@/components/ChatBot";
 import AnalyticsTracker from "./AnaliyticsTracker";
 import Script from "next/script";
+import SocialIcons from "@/components/SocialIcon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +24,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  data-theme="light">
-       <head>
+    <html lang="en" data-theme="light">
+      <head>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-K0ZT9GH5N9"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GoogleAnalitics_GID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -34,30 +35,39 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-K0ZT9GH5N9');
+            gtag('config', 'G-${process.env.NEXT_PUBLIC_GoogleAnalitics_GID}');
           `}
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        style={{
+          backgroundImage: "url('/asset/background.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          height: "100vh",
+          width: "100%",
+        }}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-white`}
       >
-         
-        {/* <Navbar/>
-        <div className="fixed bottom-12 right-12 hover:cursor-pointer">
-          <ChatBot/>
-        </div> */}
+        <div className="bg-white/50">
+          <Navbar />
+          <div className="fixed bottom-12 right-12 hover:cursor-pointer">
+            <ChatBot />
+          </div>
+          <div className="fixed bottom-1/2 left-12 translate-y-1/2 hover:cursor-pointer">
+            <SocialIcons />
+          </div>
 
-        <div className="">
-
-          {children}
-
-        </div>
-        {/* <div className="bg-[#FDF4EC] background">
+          <div className="">{children}</div>
+          {/* <div className="bg-[#FDF4EC] background">
           
             {children}
     
         </div> */}
-        <AnalyticsTracker />
+          <AnalyticsTracker />
+        </div>
       </body>
     </html>
   );

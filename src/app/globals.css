@@ -3,40 +3,38 @@
 
 
 
-
 .Col-primary {
-  color: #00280B;
+  color: #00280b;
 }
 
 .Bg-primary {
-  background: #00280B;
+  background: #00280b;
 }
 
 .Col-secondery {
-  color: #F2762F;
+  color: #f2762f;
 }
 
 .Bg-secondery {
-  background: #F2762F;
+  background: #f2762f;
 }
 
 .background {
   width: 100%;
   /* background-image: url('/asset/background.png'); */
   background-repeat: repeat-y;
-  background-size:cover;
+  background-size: cover;
 }
 
-.animate-Rotate{
-  animation: Rotate 10s forwards  linear infinite;
+.animate-Rotate {
+  animation: Rotate 10s forwards linear infinite;
 }
 
 @keyframes Rotate {
-  from{
+  from {
     rotate: 0deg;
   }
-  to{
+  to {
     rotate: 360deg;
   }
-  
 }
