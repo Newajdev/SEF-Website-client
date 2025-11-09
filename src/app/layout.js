@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-white`}
       >
         <div className="bg-white/50">
-          <Navbar />
+          {/* <Navbar />
           <div className="fixed bottom-12 right-12 hover:cursor-pointer z-50">
             <ChatBot />
           </div>
@@ -62,8 +62,8 @@ export default function RootLayout({ children }) {
           </div>
 
           <div className="">{children}</div>
-          <Footer />
-          {/* <div className="bg-[#FDF4EC] background">{children}</div> */}
+          <Footer /> */}
+          <div className="bg-[#FDF4EC] background">{children}</div>
           <AnalyticsTracker />
         </div>
       </body>

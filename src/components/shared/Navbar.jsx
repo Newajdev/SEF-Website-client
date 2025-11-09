@@ -37,7 +37,7 @@ const Navbar = () => {
         setActiveLink(Navigate)
     }    
     return (
-      <div className="Bg-primary text-white py-6 sticky top-0 w-full z-10">
+      <div className="bg-[#02300f] text-white py-6 sticky top-0 w-full z-10">
         <Container>
           <div className="flex items-center justify-between">
             <div className="">

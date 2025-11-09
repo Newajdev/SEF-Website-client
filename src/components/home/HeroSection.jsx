@@ -79,7 +79,6 @@ const HeroSection = () => {
         <Swiper
           effect={"flip"}
           grabCursor={true}
-          // navigation={true}
           navigation={{
             prevEl: ".custom-prev",
             nextEl: ".custom-next",
@@ -109,7 +108,7 @@ const HeroSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="absolute border z-20 right-28 -bottom-4 flex">
+        <div className="absolute border right-28 -bottom-4 flex">
           <button className="custom-next absolute left-2 bg-[#f2762f] text-white  p-4 rounded-full">
             <GrFormNext />
           </button>

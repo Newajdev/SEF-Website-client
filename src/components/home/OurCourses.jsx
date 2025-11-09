@@ -66,6 +66,7 @@ const OurCourses = () => {
         <Swiper
           slidesPerView={3}
           freeMode={true}
+          pagination={true}
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >
