@@ -6,6 +6,7 @@ import ChatBot from "@/components/ChatBot";
 import AnalyticsTracker from "./AnaliyticsTracker";
 import Script from "next/script";
 import SocialIcons from "@/components/SocialIcon";
+import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,20 +53,17 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-white`}
       >
         <div className="bg-white/50">
-          {/* <Navbar />
-          <div className="fixed bottom-12 right-12 hover:cursor-pointer">
+          <Navbar />
+          <div className="fixed bottom-12 right-12 hover:cursor-pointer z-50">
             <ChatBot />
           </div>
-          <div className="fixed bottom-1/2 left-12 translate-y-1/2 hover:cursor-pointer">
-            <SocialIcons />
-          </div> */}
+          <div className="fixed bottom-1/2 left-12 translate-y-1/2 hover:cursor-pointer z-50">
+            <SocialIcons className={"flex-col gap-y-4 text-[#00280b]"} />
+          </div>
 
-          {/* <div className="">{children}</div> */}
-          <div className="bg-[#FDF4EC] background">
-          
-            {children}
-    
-        </div>
+          <div className="">{children}</div>
+          <Footer />
+          {/* <div className="bg-[#FDF4EC] background">{children}</div> */}
           <AnalyticsTracker />
         </div>
       </body>

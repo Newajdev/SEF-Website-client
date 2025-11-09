@@ -8,7 +8,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
-const SocialIcons = () => {
+const SocialIcons = ({className}) => {
   const SocialLinks = [
     {
       path: "https://www.facebook.com/shahemdadiafreelancers",
@@ -32,7 +32,9 @@ const SocialIcons = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-y-4 text-2xl text-[#00280b]">
+    <div
+      className={`flex ${className} text-2xl`}
+    >
       {SocialLinks.map((icon, idx) => (
         <button>
           <Link target="_blank" href={icon.path}>
