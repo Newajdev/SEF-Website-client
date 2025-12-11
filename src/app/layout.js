@@ -7,6 +7,7 @@ import AnalyticsTracker from "./AnaliyticsTracker";
 import Script from "next/script";
 import SocialIcons from "@/components/SocialIcon";
 import Footer from "@/components/shared/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,7 @@ export default function RootLayout({ children }) {
           <Footer /> */}
           <div className="bg-[#FDF4EC] background">{children}</div>
           <AnalyticsTracker />
+          <SpeedInsights />
         </div>
       </body>
     </html>
