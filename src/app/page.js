@@ -1,114 +1,112 @@
-import Container from "@/components/Container";
-import Bootcamps from "@/components/home/Bootcamps";
-import ConsultantSection from "@/components/home/ConsultantSection";
-import HeroSection from "@/components/home/HeroSection";
-import OurCourses from "@/components/home/OurCourses";
-import UpCommingSeminer from "@/components/home/UpCommingSeminer";
-import WhyChoiceUs from "@/components/home/WhyChoiceUs";
 import Image from "next/image";
+import Link from "next/link";
+import { SiReact, SiJavascript, SiWordpress, SiFigma } from "react-icons/si";
+import { FaUsers } from "react-icons/fa";
+import AboutSection from "@/components/home/AboutSection";
+import CoursesSection from "@/components/home/CoursesSection";
+import FacilitiesSection from "@/components/home/FacilitiesSection";
+import { SeminarsSection, ConsultancySection } from "@/components/home/CTASections";
 
 export default function Home() {
-  const Courses = [
-    {
-      id: 1,
-      Name: "Graphics Design",
-      Duration: "6 month",
-      TumbnillUrl: "/asset/courses/graphics.jpg",
-      next: "#slide2",
-      priveus: "#slide4",
-    },
-    {
-      id: 2,
-      Name: "T-Shirt Design",
-      Duration: "6 month",
-      TumbnillUrl: "/asset/courses/tshirt.jpg",
-      next: "#slide3",
-      priveus: "#slide1",
-    },
-    {
-      id: 3,
-      Name: "Web development",
-      Duration: "6 month",
-      TumbnillUrl: "/asset/courses/wordpress.jpg",
-      next: "#slide4",
-      priveus: "#slide2",
-    },
-    {
-      id: 4,
-      Name: "Digital Marketing",
-      Duration: "6 month",
-      TumbnillUrl: "/asset/courses/dm.jpg",
-      next: "#slide1",
-      priveus: "#slide3",
-    },
-    {
-      id: 5,
-      Name: "UI/UX Design",
-      Duration: "6 month",
-      TumbnillUrl: "/asset/courses/uiux.jpg",
-      next: "#slide1",
-      priveus: "#slide3",
-    },
-  ];
-
   return (
-    // <Container>
-    //   <HeroSection />
-    //   <ConsultantSection />
-    //   <Bootcamps />
-    //   <UpCommingSeminer />
-    //   <OurCourses />
-    //   <WhyChoiceUs />
-    // </Container>
+    <div className="flex flex-col bg-white overflow-hidden">
+      {/* Modern Tech Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30">
+        
+        {/* Abstract Background Elements */}
+        <div className="absolute top-20 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-indigo-100/40 to-purple-100/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-50/40 to-cyan-50/40 rounded-full blur-3xl -z-10"></div>
 
-    <section className="lg:h-screen lg:max-w-4/5 mx-auto p-2 lg:p-5 text-center flex flex-col gap-2 justify-center">
-      <h1 className="text-2xl lg:text-5xl ">
-        Welcome To{" "}
-        <span className="font-semibold text-green-950">
-          {"Shah Emdadia Freelancers'"}
-        </span>
-      </h1>
-      <p className="text-2xl uppercase text-red-500">
-        our Website is under Constraction Please Stay with us
-      </p>
-
-      <div className="mt-5 lg:w-[75%]  mx-auto rounded-2xl">
-        <h1 className="text-2xl font-bold uppercase">our Courses</h1>
-
-        <div className="">
-          <div className="flex flex-wrap justify-center items-center gap-3 py-6">
-            {Courses?.map((course) => (
-              <div
-                key={course.id}
-                className="bg-white p-4 rounded-2xl shadow-xl"
+        <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center z-10">
+          
+          {/* Left Content */}
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-block px-4 py-1.5 bg-indigo-50 border border-indigo-100 rounded-full">
+               <span className="text-sm font-semibold text-indigo-600 tracking-wide uppercase">Unlock Your Potential</span>
+            </div>
+            
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight">
+              Let’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Code</span> <br/>
+              Your Career
+            </h1>
+            
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Master the skills that drive the future. From coding to design, we provide the mentorship and resources you need to build a thriving career in tech.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link 
+                href="/#courses" 
+                className="px-8 py-4 bg-[var(--color-primary)] text-white font-bold rounded-full shadow-lg shadow-indigo-200 hover:shadow-xl hover:scale-105 transition-all duration-300 transform"
               >
-                <div className="card bg-base-100 ">
-                  <figure>
-                    <Image
-                      className="w-full rounded-xl h-44"
-                      src={course.TumbnillUrl}
-                      width={400}
-                      height={400}
-                      alt={course.Name}
-                    />
-                  </figure>
-                  <div className="card-body pl-0">
-                    <h2 className="card-title font-bold">{course.Name}</h2>
-                    <p className="text-left">Duration: {course.Duration}</p>
-                  </div>
+                Explore Courses
+              </Link>
+              <Link 
+                href="/contact-us" 
+                className="px-8 py-4 bg-white text-gray-700 font-bold rounded-full shadow-sm border border-gray-200 hover:bg-gray-50 hover:border-indigo-200 hover:text-indigo-600 transition-all duration-300"
+              >
+                Start Free Trial
+              </Link>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="pt-8 flex items-center justify-center lg:justify-start gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+               <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <span className="text-sm font-semibold text-gray-500">Top Rated</span>
+               </div>
+               <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <span className="text-sm font-semibold text-gray-500">Expert Mentors</span>
+               </div>
+               <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <span className="text-sm font-semibold text-gray-500">Lifetime Access</span>
+               </div>
+            </div>
+          </div>
+
+          {/* Right Visuals */}
+          <div className="relative h-[600px] w-full hidden lg:block">
+             <div className="absolute text-cyan-500 top-10 left-10 animate-fade-in-up delay-100 transform hover:scale-110 transition-transform"><SiReact size={64}/></div>
+             <div className="absolute text-yellow-400 top-1/4 right-20 animate-fade-in-up delay-200 transform hover:scale-110 transition-transform"><SiJavascript size={56}/></div>
+             <div className="absolute text-blue-600 bottom-1/3 left-20 animate-fade-in-up delay-300 transform hover:scale-110 transition-transform"><SiWordpress size={60}/></div>
+             <div className="absolute text-purple-500 bottom-20 right-10 animate-fade-in-up delay-500 transform hover:scale-110 transition-transform"><SiFigma size={52}/></div>
+             
+             {/* Central Abstract Composition */}
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-white to-gray-50 rounded-3xl shadow-2xl border border-white/50 backdrop-blur-xl flex items-center justify-center z-20">
+                <div className="relative w-full h-full p-6 grid grid-cols-2 gap-4">
+                    <div className="bg-indigo-50 rounded-2xl h-full w-full animate-pulse"></div>
+                    <div className="space-y-4">
+                        <div className="bg-purple-50 rounded-2xl h-1/2 w-full"></div>
+                        <div className="bg-blue-50 rounded-2xl h-2/5 w-full"></div>
+                    </div>
                 </div>
-              </div>
-            ))}
+                {/* Floating "Card" Overlay */}
+                <div className="absolute -bottom-10 -right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 z-30">
+                   <div className="p-3 bg-green-100 rounded-full text-green-600">
+                      <FaUsers size={20} />
+                   </div>
+                   <div>
+                      <p className="text-xs text-gray-500 font-semibold">Join Community</p>
+                      <p className="text-sm font-bold text-gray-800">10k+ Learners</p>
+                   </div>
+                </div>
+             </div>
+
+             {/* Connecting Lines */}
+             <div className="absolute top-1/2 left-1/2 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-indigo-200 to-transparent transform -translate-x-1/2 -rotate-45 -z-10"></div>
+             <div className="absolute top-1/2 left-1/2 w-[500px] h-[1px] bg-gradient-to-r from-transparent via-purple-200 to-transparent transform -translate-x-1/2 rotate-45 -z-10"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="px-5 py-2 text-center  bg-green-100 border-none rounded-full flex lg:flex-row  flex-col items-center justify-center">
-        <p className="lg:text-3xl">Contact with us:</p>
-        <p className="lg:ml-10 font-bold lg:text-3xl">
-          +880 1817-121469, +880 1316-765066, +880 1757-549926
-        </p>
-      </div>
-    </section>
+      <AboutSection />
+      <CoursesSection />
+      <FacilitiesSection />
+      <SeminarsSection />
+      <ConsultancySection />
+    </div>
   );
 }
+

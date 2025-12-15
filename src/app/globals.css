@@ -1,42 +1,40 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-
-.Col-primary {
-  color: #00280b;
+:root {
+  --color-primary: #00280b;
+  --color-secondary: #f2762f;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
-.Bg-primary {
-  background: #00280b;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: var(--font-geist-sans), sans-serif;
+  scroll-behavior: smooth;
 }
 
-.Col-secondery {
-  color: #f2762f;
+.text-primary {
+  color: var(--color-primary);
 }
 
-.Bg-secondery {
-  background: #f2762f;
+.bg-primary {
+  background-color: var(--color-primary);
 }
 
-.background {
-  width: 100%;
-  /* background-image: url('/asset/background.png'); */
-  background-repeat: repeat-y;
-  background-size: cover;
+.text-secondary {
+  color: var(--color-secondary);
 }
 
-.animate-Rotate {
-  animation: Rotate 10s forwards linear infinite;
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
 
-@keyframes Rotate {
-  from {
-    rotate: 0deg;
-  }
-  to {
-    rotate: 360deg;
-  }
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
-
-
