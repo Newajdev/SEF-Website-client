@@ -6,7 +6,10 @@ import Footer from "./Footer";
 const FooterWrapper = () => {
     const pathname = usePathname();
 
-    if (["/contact-us", "/free-seminar", "/free-consultancy"].includes(pathname)) {
+    if (
+        ["/contact-us", "/free-seminar", "/free-consultancy"].includes(pathname) ||
+        pathname.startsWith("/admin")
+    ) {
         return null;
     }
 

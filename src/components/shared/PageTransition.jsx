@@ -6,6 +6,11 @@ import { usePathname } from "next/navigation";
 const PageTransition = ({ children }) => {
     const pathname = usePathname();
 
+    // Skip animation for admin routes - they have their own animation system
+    if (pathname?.startsWith("/admin")) {
+        return <>{children}</>;
+    }
+
     return (
         <AnimatePresence mode="wait">
             <motion.div

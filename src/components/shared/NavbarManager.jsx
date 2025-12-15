@@ -7,8 +7,11 @@ import CourseNavbar from "./CourseNavbar";
 const NavbarManager = () => {
     const pathname = usePathname();
 
-    // Hide Navbar on specific pages
-    if (["/contact-us", "/free-seminar", "/free-consultancy"].includes(pathname)) {
+    // Hide Navbar on specific pages (forms, admin)
+    if (
+        ["/contact-us", "/free-seminar", "/free-consultancy"].includes(pathname) ||
+        pathname.startsWith("/admin")
+    ) {
         return null;
     }
 
