@@ -42,11 +42,12 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="">
               <Image
-                src="/asset/SEF_Logo-01.svg"
+                src="/asset/logo.png"
                 width={160}
                 height={50}
-                alt="Shah Emdadia Freelancers' logo"
+                alt="Shah Emdadia Freelancers logo"
                 loading="lazy"
+                className="h-auto w-[140px] md:w-[160px]"
               />
             </div>
 

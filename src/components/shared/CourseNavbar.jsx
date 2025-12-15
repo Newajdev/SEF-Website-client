@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const CourseNavbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,13 +19,15 @@ const CourseNavbar = () => {
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex flex-col">
-                        <span className="text-2xl font-bold text-[var(--color-primary)] tracking-tight">
-                            SEF<span className="text-[var(--color-secondary)]">.</span>
-                        </span>
-                        <span className="text-[10px] uppercase font-semibold tracking-widest text-gray-500">
-                            Course Portal
-                        </span>
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/asset/logo.png"
+                            width={150}
+                            height={45}
+                            alt="Shah Emdadia Freelancers logo"
+                            className="h-auto w-[130px] md:w-[150px]"
+                            loading="lazy"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

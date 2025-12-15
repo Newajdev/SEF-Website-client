@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
@@ -10,9 +11,14 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-[var(--color-primary)] tracking-tight">
-                SEF<span className="text-[var(--color-secondary)]">.</span>
-              </span>
+              <Image
+                src="/asset/logo.png"
+                width={160}
+                height={50}
+                alt="Shah Emdadia Freelancers logo"
+                loading="lazy"
+                className="h-auto w-[140px] md:w-[160px]"
+              />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               Empowering the next generation of digital professionals with industry-leading courses and mentorship.
