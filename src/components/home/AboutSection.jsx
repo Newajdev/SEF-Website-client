@@ -53,7 +53,7 @@ const AboutSection = () => {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl lg:text-5xl font-extrabold text-[var(--color-primary)] mb-4">
-                        About SEF
+                        About Shah Emdadia Freelancers'
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Empowering individuals with expert-led skills for a successful career in tech
@@ -103,7 +103,7 @@ const AboutSection = () => {
                             </div>
                             
                             <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                                Premier IT Training Institute
+                                IT Training Institute
                             </h3>
                             
                             <p className="text-lg text-gray-600 leading-relaxed">
