@@ -342,7 +342,7 @@ export default function CoursePage() {
                                             <FaStar key={i} />
                                         ))}
                                     </div>
-                                    <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
+                                    <p className="text-gray-700 mb-6 italic leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
                                     <div className="flex items-center gap-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full flex items-center justify-center">
                                             <FaUserGraduate className="text-gray-600" />

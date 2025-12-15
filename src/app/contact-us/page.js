@@ -97,7 +97,7 @@ export default function ContactUs() {
                         </div>
                         <div>
                             <h1 className="text-3xl font-bold mb-1">Get in Touch</h1>
-                            <p className="text-gray-200 text-sm">We'd love to hear from you</p>
+                            <p className="text-gray-200 text-sm">We&apos;d love to hear from you</p>
                         </div>
                     </div>
                 </div>
