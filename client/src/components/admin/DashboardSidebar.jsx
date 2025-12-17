@@ -40,7 +40,7 @@ const DashboardSidebar = () => {
         // Handle logout logic
         if (typeof window !== "undefined") {
             localStorage.removeItem("adminToken");
-            window.location.href = "/admin/login";
+            window.location.href = "/auth/login";
         }
     };
 

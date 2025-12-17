@@ -18,7 +18,6 @@ export const optionalAuthenticate = async (req, _res, next) => {
     }
     return next();
   } catch (error) {
-    // Ignore invalid tokens for optional auth
     return next();
   }
 };
